@@ -4,13 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon"type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
 
     <title>Frontend Mentor | Social proof section</title>
 
@@ -26,36 +23,100 @@
     </style>
   </head>
   <body>
-    10,000+ of our users love our products.
+		<div class="page-wrapper">
+			<main class="page-wrapper__main">
+				<header class="header">
+					<div class="header__title">
+						<h1 class="header-slogan">10,000+ of our users love our products.</h1>
+						<p class="header-description">
+							We only provide great products combined with excellent customer service.
+							See what our satisfied customers are saying about our services.
+						</p>
+					</div>
+					<div class="header__ratings">
+						<div class="header__ratings__item">
+							<div class="star-icon-group">
+								<img src="images/icon-star.svg" class="star-icon" alt='' aria-hidden="true">
+								<img src="images/icon-star.svg" class="star-icon" alt='' aria-hidden="true">
+								<img src="images/icon-star.svg" class="star-icon" alt='' aria-hidden="true">
+								<img src="images/icon-star.svg" class="star-icon" alt='' aria-hidden="true">
+								<img src="images/icon-star.svg" class="star-icon" alt='' aria-hidden="true">
+							</div>
+							<p class="rating-description">Rated 5 Stars in Reviews</p>
+						</div>
+						<div class="header__ratings__item">
+							<div class="star-icon-group">
+								<img src="images/icon-star.svg" class="star-icon" alt='' aria-hidden="true">
+								<img src="images/icon-star.svg" class="star-icon" alt='' aria-hidden="true">
+								<img src="images/icon-star.svg" class="star-icon" alt='' aria-hidden="true">
+								<img src="images/icon-star.svg" class="star-icon" alt='' aria-hidden="true">
+								<img src="images/icon-star.svg" class="star-icon" alt='' aria-hidden="true">
+							</div>
+							<p class="rating-description">Rated 5 Stars in Report Guru</p>
+						</div>
+						<div class="header__ratings__item">
+							<div class="star-icon-group">
+								<img src="images/icon-star.svg" class="star-icon" alt='' aria-hidden="true">
+								<img src="images/icon-star.svg" class="star-icon" alt='' aria-hidden="true">
+								<img src="images/icon-star.svg" class="star-icon" alt='' aria-hidden="true">
+								<img src="images/icon-star.svg" class="star-icon" alt='' aria-hidden="true">
+								<img src="images/icon-star.svg" class="star-icon" alt='' aria-hidden="true">
+							</div>
+							<p class="rating-description">Rated 5 Stars in BestTech</p>
+						</div>
+					</div>
+				</header>
+				<section class="customer-section">
+					<article class="customer-card">
+						<div class="customer-card__title">
+							<img src="images/image-colton.jpg" alt="customer image">
+							<div>
+								<h4>Colton Smith</h4> 
+								<h5>Verified Buyer</h5>
+							</div>
+						</div>
+						<blockquote class="customer-card__review">
+							"We needed the same printed design as the one we had ordered a week prior.
+							Not only did they find the original order, but we also received it in time.
+							Excellent!"
+						</p>
+					</article>
 
-    We only provide great products combined with excellent customer service.
-    See what our satisfied customers are saying about our services.
-    
-    Rated 5 Stars in Reviews
-    Rated 5 Stars in Report Guru
-    Rated 5 Stars in BestTech
-    
-    Colton Smith 
-    Verified Buyer
-    "We needed the same printed design as the one we had ordered a week prior.
-    Not only did they find the original order, but we also received it in time.
-    Excellent!"
-    
-    Irene Roberts 
-    Verified Buyer
-    "Customer service is always excellent and very quick turn around. Completely
-    delighted with the simplicity of the purchase and the speed of delivery."
-    
-    Anne Wallace 
-    Verified Buyer
-    "Put an order with this company and can only praise them for the very high
-    standard. Will definitely use them again and recommend them to everyone!"
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+					<article class="customer-card">
+						<div class="customer-card__title">
+							<img src="images/image-irene.jpg" alt="customer image">
+							<div>
+								<h4>Irene Roberts</h4> 
+								<h5>Verified Buyer</h5>
+							</div>
+						</div>
+						<blockquote class="customer-card__review">
+							"Customer service is always excellent and very quick turn around. Completely
+							delighted with the simplicity of the purchase and the speed of delivery."
+						</p>
+					</article>
+					
+					<article class="customer-card">
+						<div class="customer-card__title">
+							<img src="images/image-anne.jpg" alt="customer image">
+							<div>
+								<h4>Anne Wallace</h4> 
+								<h5>Verified Buyer</h5>
+							</div>
+						</div>
+						<blockquote class="customer-card__review">
+							"Put an order with this company and can only praise them for the very high
+							standard. Will definitely use them again and recommend them to everyone!"
+						</p>
+					</article>
+			</section>
+			</main>
+			<footer class="page-wrapper__footer attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="#">Daniel Hopler</a>.
+			</footer>
+		</div>
   </body>
 </html>

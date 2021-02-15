@@ -1,0 +1,260 @@
+/*=== Table of Contents:
+    
+    0. Variables
+    1. Reset
+    2. Global Styles
+    3. Layout
+    4. Components
+
+===*/
+
+/*------------------- 
+    0. Variables 
+ --------------------*/ 
+
+ /* colors */
+ $primaryMagenta: hsl(300, 43%, 22%);
+ $primaryPink: hsl(333, 80%, 67%);
+
+ $neutralDarkMagenta: hsl(303, 10%, 53%);
+ $neutralLightMagenta: hsl(300, 24%, 96%);
+ $neutralWhite: hsl(0, 0%, 100%);
+
+ /* typography */
+$primaryFont: 'Spartan', sans-serif;
+$fontRegular: 400;
+$fontMedium: 500;
+$fontBold: 700;
+
+
+/*------------------- 
+    1. Reset - Eric Meyer's Reset 
+  -------------------*/ 
+  @import 'reset';
+
+
+  /*------------------- 
+      2. Global Styles 
+    -------------------*/ 
+    html {
+      height: 100%;
+      font-size: 93.75%    /* 15px / 16px = 93.75%  */
+    }
+
+    body {
+      height: 100%;
+      min-height: 100vh;
+      
+    }
+  
+
+  /*------------------- 
+      3. Layout 
+    --------------------*/
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background-color: $neutralWhite;
+      z-index: -1;
+
+      /* background effect */
+      background: url(../images/bg-pattern-top-desktop.svg) no-repeat top left,
+                  url(../images/bg-pattern-bottom-desktop.svg) no-repeat bottom -50px right 0;
+      
+      font-family: $primaryFont;
+      overflow: hidden;
+    }
+
+    .page-wrapper__main {
+      
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 8rem;
+      
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 1rem;
+      
+    }
+
+    .customer-section {
+      display: flex;
+      justify-content: space-between;
+    }
+    .page-wrapper__footer{
+      padding-bottom: 2rem;
+    }
+    
+  
+  /*------------------- 
+      4. Components
+    --------------------*/
+
+    /* Header */
+    .header__title {
+      max-width: 32rem;
+
+
+      .header-slogan {
+        color: $primaryMagenta;
+        font-size: 3rem;
+        font-weight: $fontBold;
+        padding-bottom: 1rem;
+        }
+        
+      .header-description {
+      
+        line-height: 1.5rem;
+        color: $neutralDarkMagenta;
+        font-weight: $fontMedium;
+      }
+    }
+
+    .header__ratings {
+      .header__ratings__item {
+        display: flex;
+        padding: 1.5rem 5rem 1.5rem 2rem ;
+        margin-top: 1rem;
+        border-radius: 0.5rem;
+        background: $neutralLightMagenta;
+        color:$primaryMagenta;
+        font-weight: $fontBold;
+      }
+
+      img {
+        padding-right: 0.2rem;
+      }
+
+      p {
+        padding-left: 1.5rem;
+      }
+    }
+
+
+    .header__ratings__item:nth-child(1) {
+      transform: translateX(-20%);
+    }
+    .header__ratings__item:nth-child(2) {
+      transform: translateX(-10%);
+    }
+
+    /* Customer Reviews Section */
+    .customer-card {
+      background: $primaryMagenta;
+      border-radius: 0.5rem;
+      padding: 2.5rem;
+      margin: 1rem;
+      margin-top: 4rem;
+    }
+
+    .customer-card__title {
+      display: flex;
+      align-items: center;
+      color: $neutralWhite;
+      font-size: 0.9rem;
+      font-weight: $fontBold;
+      padding-bottom: 2rem;
+      img {
+        border-radius: 50%;
+        height: 3rem;
+        width: 3rem;
+        margin-right: 1.5rem;
+      }
+      h5 {
+        color: $primaryPink;
+        font-weight: $fontRegular;
+        padding-top: 0.5rem;
+      }
+    }
+
+    .customer-card__review {
+      font-size: 0.88rem;
+      line-height: 1.4rem;
+      color: $neutralLightMagenta;
+      font-weight: $fontMedium;
+    }
+
+    /* Stagger Effect on Cards */
+
+    .customer-card:nth-child(2) {
+      transform: translateY(10%);
+    }
+    
+    .customer-card:nth-child(3) {
+      transform: translateY(20%);
+    }
+
+    /*------------------- 
+      Media Queries
+    --------------------*/
+    @media(max-width: 1024px) {
+      
+      .header {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 2rem;
+        .header__ratings__item {
+          transform: none;
+          flex-direction: column;
+          align-items: center;
+          padding: 1rem 2.5rem;
+          img {
+            padding-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+
+    @media(max-width: 1024px) and (orientation: landscape) {
+      .customer-section {
+        margin: 1rem;
+        justify-content: center;
+        
+        flex-wrap: wrap;
+        .customer-card {
+          transform: none;
+          margin: 1rem;
+        }
+      }
+    }
+
+    @media(max-width: 768px) {
+      .page-wrapper__main {
+        margin: 2rem 1rem;
+      }
+      .customer-section {
+        flex-wrap: wrap;
+        .customer-card {
+          transform: none;
+          margin: 1rem;
+        }
+      }
+
+    }
+    
+
+    @media(max-width: 375px) {
+      html {
+        font-size: 85%;
+      }
+
+      .header__title {
+        .header-slogan {
+          font-size: 2.2rem;
+          margin: 2rem 1rem 1rem 1rem;
+        }
+      }
+      .page-wrapper {
+        background: url(../images/bg-pattern-top-mobile.svg) no-repeat top left,
+                  url(../images/bg-pattern-bottom-mobile.svg) no-repeat bottom -50px right;                                
+      }
+    }
