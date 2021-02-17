@@ -232,7 +232,7 @@ body {
   margin-right: 1.5rem;
 }
 
-.customer-card__title h5 {
+.customer-card__title p {
   color: #ee68a4;
   font-weight: 400;
   padding-top: 0.5rem;
